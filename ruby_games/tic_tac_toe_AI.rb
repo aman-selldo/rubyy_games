@@ -19,7 +19,7 @@ class Tic_tac_toe
         if winner
             puts "Congratulations! #{winner} won the game"
         else
-            puts "You are good for nothing! haha"
+            puts "Tum se nah ho payega"
         end
     end
 
@@ -73,7 +73,7 @@ class Tic_tac_toe
 
     def computer_move
         puts "Computer is thinking"
-        best_score = -Float::INFINITY
+        best_score = -999999
         best_move = nil
         @board.each_with_index do |cell, index|
             if cell == " "
@@ -106,7 +106,7 @@ class Tic_tac_toe
         end
 
         if is_maximizing
-            best_score = -Float::INFINITY
+            best_score = -999999
             @board.each_with_index do |cell, index|
                 if cell == " "
                 @board[index] = "O"
@@ -117,7 +117,7 @@ class Tic_tac_toe
             end
             return best_score
         else
-            best_score = Float::INFINITY
+            best_score = 999999
             @board.each_with_index do |cell, index|
                 if cell == " "
                     @board[index] = "X"
